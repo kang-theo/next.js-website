@@ -3,6 +3,7 @@ import getUser from '@/lib/getUser'
 import getUserPosts from '@/lib/getUserPosts'
 import UserPosts from './components/UserPosts'
 import type { Metadata } from 'next'
+import getAllUsers from '@/lib/getAllUsers'
 
 type Params = {
   params: {
@@ -21,6 +22,7 @@ export async function generateMetadata({ params: { userId } }: Params): Promise<
 }
 
 // 3. fetch data where it's used
+// SSR to SSG (2) get params from generateStaticParams. It get userId from http request each time without generateStaticParams
 export default async function UserPage({ params: { userId } }: Params) {
   // 1. fetch data on the server using Server Components
   const userData: Promise<User> = getUser(userId)
@@ -42,4 +44,17 @@ export default async function UserPage({ params: { userId } }: Params) {
       </Suspense>
     </>
   )
+}
+
+//  SSR to SSG (1)
+//  generates static parameters for the userId pages by fetching data about users,
+//  and returning an array of objects with userId as a parameter.
+//  check by running `npm run build`
+export async function generateStaticParams() {
+  const usersData: Promise<User[]> = getAllUsers()
+  const users = await usersData
+
+  return users.map(user => ({
+    userId: user.id.toString()
+  }))
 }
