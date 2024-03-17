@@ -4,7 +4,9 @@ export default async function getUserPosts(userId: string) {
   // { cache: 'no-store' }, { cache: 'force-cache' }, { cache: 'no-cache' }, { cache: 'only-if-cached' }
   // { next: {revalidate: 60} }
 
-  if (!res.ok) throw new Error('failed to fetch all posts')
+// throw new Error('failed to fetch all posts')
+// return notFound()
+  if (!res.ok) return undefined 
 
   return res.json()
 }
