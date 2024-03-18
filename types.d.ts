@@ -47,3 +47,10 @@ type SearchResult = {
     pages?: Result[];
   };
 };
+
+//Blog Post
+type BlogPost = {
+  id: string;
+  title: string;
+  date: string;
+};
