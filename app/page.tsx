@@ -1,4 +1,5 @@
 import Posts from "./components/Posts";
+import Link from "next/link";
 
 export const revalidate = 10 // for debug
 // export const revalidate = 86400 // for deploy blog
@@ -13,6 +14,9 @@ export default function Home() {
         </span>
       </p>
       <Posts />
+      <Link className="text-white/50 hover:text-white" href="/todos">
+        Go to Todos
+      </Link>
     </main>
   );
 }
