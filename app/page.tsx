@@ -1,5 +1,8 @@
 import Posts from "./components/Posts";
 
+export const revalidate = 10 // for debug
+// export const revalidate = 86400 // for deploy blog
+
 export default function Home() {
   return (
     <main className="px-6 mx-auto">

@@ -2,6 +2,7 @@ import { getSortedPostsData } from "@/lib/posts"
 import ListItem from "./ListItem"
 
 export default function Posts() {
+  // synchronous, posts already on the server
   const posts = getSortedPostsData()
 
   return (
