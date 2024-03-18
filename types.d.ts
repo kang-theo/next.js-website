@@ -54,3 +54,11 @@ type BlogPost = {
   title: string;
   date: string;
 };
+
+// RESTful API examples
+type Todo = {
+  userId: number,
+  id: number,
+  title: string,
+  completed: boolean
+} 
