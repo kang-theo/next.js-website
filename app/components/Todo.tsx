@@ -66,7 +66,8 @@ export default function Todo(todo: Todo) {
         <article className="my-4 flex justify-between items-center" style={{ opacity: !isMutating ? 1 : 0.7 }}>
             <label className="text-2xl hover:underline">
                 {/* Issue: https://www.youtube.com/watch?v=v_HpVwCDAgU&list=PL0Zuz27SZ-6Pk-QJIdGd1tGZEzy9RTgtj&index=11 */}
-                <Link prefetch={false} href={`/edit/${todo.id}`}>{todo.title}</Link>
+                {/* <Link prefetch={false} href={`/edit/${todo.id}`}>{todo.title}</Link> */}
+                <Link href={`/edit/${todo.id}`}>{todo.title}</Link>
             </label>
             <div className="flex items-center gap-4">
                 <input
