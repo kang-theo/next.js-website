@@ -1,4 +1,5 @@
 import { compileMDX } from 'next-mdx-remote/rsc'
+import CustomImage from '@/app/components/CustomImage'
 
 type Filetree = {
   "tree": [
@@ -25,6 +26,14 @@ export async function getPostByName(fileName: string): Promise<BlogPost | undefi
 
   const { frontmatter, content } = await compileMDX<{ title: string, date: string, tags: string[] }>({
     source: rawMDX,
+    components: {
+      CustomImage,
+    },
+    options: {
+      parseFrontmatter: true,
+      mdxOptions: {
+      },
+    }
   })
 
   const id = fileName.replace(/\.mdx$/, '')
