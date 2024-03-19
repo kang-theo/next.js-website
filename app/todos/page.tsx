@@ -7,8 +7,8 @@ export default async function Todos() {
   return (
     <main className="px-6 prose prose-xl prose-slate dark:prose-invert mx-auto">
       {/* <NavbarTodo /> */}
-      <AddTodo />
       <TodoList />
+      <AddTodo />
       <Link className="text-left text-white/50 hover:text-white" href="/">
         Go to Home page
       </Link>
