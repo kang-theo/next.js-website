@@ -36,5 +36,10 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
 ## Development
+
 ### Setup
-* npx create-next-app@latest (ts, eslint, tailwind-css, app router, non-src)
+
+* `npx create-next-app@latest` (ts, eslint, tailwind-css, app router, non-src)
+* `npx json-server -w db.json -p 3500 -h 127.0.0.1`
+* `npm i next-mdx-remote`
+* `npm i -D @tailwindcss/aspect-ratio`
