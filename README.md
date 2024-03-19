@@ -43,3 +43,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 * `npx json-server -w db.json -p 3500 -h 127.0.0.1`
 * `npm i next-mdx-remote`
 * `npm i -D @tailwindcss/aspect-ratio`
+* `npm i highlight.js rehype-highlight rehype-slug rehype-autolink-headings`
+
+### Issues
+* Fail to get images for private repo (access token).
