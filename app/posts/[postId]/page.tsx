@@ -6,8 +6,8 @@ import Link from "next/link"
 // In node_modules/highligh.j, colored code blocks
 import 'highlight.js/styles/github-dark.css'
 
-export const revalidate = 10
-// export const revalidate = 86400
+// export const revalidate = 10
+export const revalidate = 86400
 
 type Props = {
   params: {

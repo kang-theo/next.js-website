@@ -13,6 +13,7 @@ const nextConfig = {
       },
     ],
   },
+  exclude: [/archive/, /app\/about/, /app\/todo/],
 };
 
 module.exports = nextConfig;

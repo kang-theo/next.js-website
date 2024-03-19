@@ -2,8 +2,8 @@ import Posts from "./components/Posts";
 import Link from "next/link";
 import MyProfilePic from "./components/MyProfilePic";
 
-export const revalidate = 10 // for debug
-// export const revalidate = 86400 // for deploy
+// export const revalidate = 10 // for debug
+export const revalidate = 86400 // for deploy
 
 export default function Home() {
   return (
