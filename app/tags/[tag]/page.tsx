@@ -2,7 +2,7 @@ import { getPostsMeta } from "@/lib/posts"
 import ListItem from "@/app/components/ListItem"
 import Link from "next/link"
 
-export const revalidate = 0 // not work with generatedStaticParams when set to 0
+export const revalidate = 10 // not work with generatedStaticParams when set to 0
 // export const revalidate = 86400
 
 type Props = {
