@@ -49,11 +49,18 @@ type SearchResult = {
 };
 
 //Blog Post
+type Meta = {
+    id: string,
+    title: string,
+    date: string,
+    tags: string[],
+}
+
 type BlogPost = {
-  id: string;
-  title: string;
-  date: string;
-};
+    meta: Meta,
+    // get type from tips of compiler
+    content: ReactElement<any, string | JSXElementConstructor<any>>,
+}
 
 // RESTful API examples
 type Todo = {
