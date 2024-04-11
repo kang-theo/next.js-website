@@ -5,6 +5,7 @@ export default async function Posts() {
   // synchronous, posts already on the server
   // const posts = getSortedPostsData()
   const posts = await getPostsMeta()
+  // console.log(posts)
 
   if (!posts) {
     return <p className="mt-10 text-center">Sorry, no posts available.</p>
