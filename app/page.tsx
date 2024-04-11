@@ -16,9 +16,9 @@ export default function Home() {
         </span>
       </p>
       <Posts />
-      <Link className="text-white/50 hover:text-white" href="/todos">
+{/*       <Link className="text-white/50 hover:text-white" href="/todos">
         Go to Todos
-      </Link>
+      </Link> */}
     </div>
   );
 }
