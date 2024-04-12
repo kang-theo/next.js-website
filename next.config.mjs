@@ -10,13 +10,6 @@ const nextConfig = {
       },
     ],
   },
-  // set up a custom incremental cache handler to skip the fetch cache
-  experimental: {
-    appDir: true,
-    incrementalCacheHandlerPath: process.env.CUSTOM_CACHE_HANDLER
-      ? path.resolve(__dirname, "cache-handler.js")
-      : undefined,
-  },
 };
 
 export default nextConfig;
